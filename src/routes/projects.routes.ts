@@ -1,7 +1,25 @@
 import { Router } from 'express';
+import { getCustomRepository } from 'typeorm';
 import ProjectController from '../Controllers/ProjectController';
+import ProjectRepository from '../repositories/ProjectsRepository';
 
 const naversRouter = Router();
+
+naversRouter.get('/projectsAndCountNavers', async (request, response) => {
+  const projectsRepository = getCustomRepository(ProjectRepository);
+
+  const projects = await projectsRepository.findProjectsCountNavers();
+
+  return response.json(projects);
+});
+
+naversRouter.get('/projectsAndNavers', async (request, response) => {
+  const projectsRepository = getCustomRepository(ProjectRepository);
+
+  const projects = await projectsRepository.findProjectsAndNavers();
+
+  return response.json(projects);
+});
 
 naversRouter.get('/', async (request, response) => {
   const findProjects = new ProjectController();

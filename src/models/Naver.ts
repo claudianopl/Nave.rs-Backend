@@ -26,7 +26,7 @@ class Naver {
   @Column('date')
   admission_date: Date;
 
-  @ManyToMany(() => Project, project => project.navers)
+  @ManyToMany(() => Project, project => project.navers, { cascade: true })
   @JoinTable()
   projects: Project[];
 

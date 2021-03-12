@@ -1,8 +1,8 @@
 import { MigrationInterface, QueryRunner } from 'typeorm';
 
-export default class NaversAndProjectsRelation1615491583254
+export default class NaversAndProjectsRelation1615523456210
   implements MigrationInterface {
-  name = 'NaversAndProjectsRelation1615491583254';
+  name = 'NaversAndProjectsRelation1615523456210';
 
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.query(

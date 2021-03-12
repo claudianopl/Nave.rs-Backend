@@ -22,7 +22,7 @@ class ProjectController {
   public async Show(id: string): Promise<Project[]> {
     const projectRepository = getCustomRepository(ProjectRepository);
 
-    const project = await projectRepository.findProjectId(id);
+    const project = await projectRepository.findProjectIdAndNavers(id);
 
     if (!project) {
       throw new AppError('Project do not exists!', 404);

@@ -26,7 +26,7 @@ class NaverController {
   public async Show(id: string): Promise<Naver[]> {
     const naverRepository = getCustomRepository(NaversRepository);
 
-    const naver = await naverRepository.findProjectId(id);
+    const naver = await naverRepository.findNaverId(id);
 
     if (!naver) {
       throw new AppError('Naver do not exists!', 404);

@@ -1,7 +1,17 @@
 import { Router } from 'express';
+import { getCustomRepository } from 'typeorm';
 import NaverController from '../Controllers/NaveController';
+import NaversRepository from '../repositories/NaversRepository';
 
 const naversRouter = Router();
+
+naversRouter.get('/orderBy', async (request, response) => {
+  const naversRepository = getCustomRepository(NaversRepository);
+
+  const navers = await naversRepository.getAdmissionDateInOrder();
+
+  return response.json(navers);
+});
 
 naversRouter.get('/', async (request, response) => {
   const findNavers = new NaverController();
