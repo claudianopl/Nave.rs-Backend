@@ -6,12 +6,14 @@
   "scripts": {
     "build": "tsc",
     "dev:server": "ts-node-dev --respawn src/server.ts",
-    "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js"
+    "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js",
+    "generate": "typeorm migration:generate -n"
   },
   "dependencies": {
     "express": "^4.17.1",
+    "express-async-errors": "^3.1.1",
     "pg": "^8.5.1",
-    "typeorm": "^0.2.31"
+    "typeorm": "0.2.31"
   },
   "devDependencies": {
     "@types/express": "^4.17.11",

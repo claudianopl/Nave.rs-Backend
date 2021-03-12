@@ -1,10 +1,15 @@
 {
   "type": "postgres",
+  "logging": false,
   "host": "localhost",
   "port": 5432,
   "username": "postgres",
   "password": "postgres",
   "database": "desafio_naver",
+  "synchronize": false,
+  "entities": [
+    "./src/models/*.ts"
+  ],
   "migrations": [
     "./src/database/migrations/*.ts"
   ],
