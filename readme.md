@@ -5,9 +5,9 @@
 <p align="center">
  <a href="#-sobre">Sobre</a> |
  <a href="#-requisitos">Requisitos</a> |
- <a href="#-tecnologias">Tecnologias</a> |
+ <a href="#-principais-tecnologias">Principais Tecnologias</a> |
  <a href="#-dificuldades">Dificuldades</a> |
- <a href="#-desafio-concluídos">Desafios concluídos</a> |
+ <a href="#-desafios-concluídos">Desafios concluídos</a> |
  <a href="#%EF%B8%8F-como-executar">Como executar</a>
 </p>
 
